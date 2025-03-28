@@ -9,14 +9,18 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.moreofyoulord.myapp"
+      "package": "com.moreofyoulord.myapp",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
@@ -47,6 +51,9 @@
         "projectId": "0b63147b-3992-4d5b-bac2-2b5474fe372c"
       }
     },
-    "owner": "moreofyoulord"
+    "owner": "moreofyoulord",
+    "updates": {
+      "url": "https://u.expo.dev/0b63147b-3992-4d5b-bac2-2b5474fe372c"
+    }
   }
 }
