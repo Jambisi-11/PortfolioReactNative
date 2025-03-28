@@ -1,18 +1,26 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground, ScrollView, Dimensions } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ImageBackground,
+  ScrollView,
+  Dimensions,
+} from "react-native";
 
 // Import your images (make sure paths are correct)
-const htmlImg = require('../assets/images/html.png');
-const cssImg = require('../assets/images/css.png');
-const jsImg = require('../assets/images/js.png');
-const reactImg = require('../assets/images/react.png');
-const tailwindImg = require('../assets/images/tailwind.png');
-const gitImg = require('../assets/images/git.png');
-const soundEngineerImg = require('../assets/images/soundEngineer.png');
-const fashionDesignerImg = require('../assets/images/fashionDesigner.png');
-const filmEditorImg = require('../assets/images/filmEditor.png');
-const audioEditorImg = require('../assets/images/audioEditor.png');
-const ReactNative = require('../assets/images/ReactNative.png');
+const htmlImg = require("../assets/images/html.png");
+const cssImg = require("../assets/images/css.png");
+const jsImg = require("../assets/images/js.png");
+const reactImg = require("../assets/images/react.png");
+const tailwindImg = require("../assets/images/tailwind.png");
+const gitImg = require("../assets/images/git.png");
+const soundEngineerImg = require("../assets/images/soundEngineer.png");
+const fashionDesignerImg = require("../assets/images/fashionDesigner.png");
+const filmEditorImg = require("../assets/images/filmEditor.png");
+const audioEditorImg = require("../assets/images/audioEditor.png");
+const ReactNative = require("../assets/images/ReactNative.png");
 interface ServiceItem {
   name: string;
   img: any;
@@ -23,7 +31,7 @@ interface ServiceCategory {
   items: ServiceItem[];
 }
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
 const Service = () => {
   const categories: ServiceCategory[] = [
@@ -33,10 +41,11 @@ const Service = () => {
         { name: "HTML", img: htmlImg },
         { name: "CSS", img: cssImg },
         { name: "JavaScript", img: jsImg },
-        { name: "React", img: reactImg },
+        { name: "React.JS", img: reactImg },
         { name: "Tailwind CSS", img: tailwindImg },
-        { name: "GitHub", img: gitImg }
-      ]
+        { name: "GitHub", img: gitImg },
+        { name: "React Native", img: ReactNative },
+      ],
     },
     {
       title: "Others",
@@ -44,9 +53,9 @@ const Service = () => {
         { name: "Sound Engineer", img: soundEngineerImg },
         { name: "Fashion Designer", img: fashionDesignerImg },
         { name: "Film Editor", img: filmEditorImg },
-        { name: "Audio Editor", img: audioEditorImg }
-      ]
-    }
+        { name: "Audio Editor", img: audioEditorImg },
+      ],
+    },
   ];
 
   return (
@@ -55,7 +64,7 @@ const Service = () => {
       style={styles.background}
       resizeMode="cover"
     >
-      <ScrollView 
+      <ScrollView
         contentContainerStyle={[styles.container, { minHeight: height }]}
         showsVerticalScrollIndicator={false}
       >
@@ -87,8 +96,8 @@ const Service = () => {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   container: {
     padding: 20,
@@ -96,51 +105,51 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
-    color: '#fff',
-    textAlign: 'center',
+    color: "#fff",
+    textAlign: "center",
   },
   categoriesContainer: {
-    flexDirection: 'column',
+    flexDirection: "column",
     gap: 20,
   },
   categoryCard: {
-    width: '100%',
+    width: "100%",
     padding: 15,
     borderRadius: 10,
-    backgroundColor: 'rgba(45, 55, 72, 0.8)', // Semi-transparent
+    backgroundColor: "rgba(45, 55, 72, 0.8)", // Semi-transparent
   },
   categoryTitle: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: "600",
     marginBottom: 15,
-    color: '#68d391',
-    textAlign: 'center',
+    color: "#68d391",
+    textAlign: "center",
   },
   itemsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
     gap: 10,
   },
   itemWrapper: {
-    width: '48%',
+    width: "48%",
     marginBottom: 15,
-    alignItems: 'center',
+    alignItems: "center",
   },
   itemImage: {
-    width: '100%',
+    width: "100%",
     height: 120,
     borderRadius: 8,
     marginBottom: 8,
     borderWidth: 1,
-    borderColor: '#68d391',
+    borderColor: "#68d391",
   },
   itemText: {
-    color: '#68d391',
+    color: "#68d391",
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
   },
 });
 

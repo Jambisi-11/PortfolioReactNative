@@ -60,7 +60,7 @@ const Portfolio: React.FC = () => {
       town: "Ejigbo,",
       date: "2005 - 2008",
       description:
-        "Completed high school with a focus on mathematics and science. Also, Senior Prefect",
+        "Completed high school with a focus on \nmathematics and science. Also, Senior Prefect",
     },
   ];
 
@@ -78,7 +78,7 @@ const Portfolio: React.FC = () => {
       town: "Isanlu Isin",
       date: "1995-2001",
       description:
-        "Completed high school with a focus on mathematics and science. Also, Senior Prefect",
+        "Completed high school with a focus on \nmathematics and science. Also, Senior Prefect",
     },
   ];
 
@@ -96,7 +96,7 @@ const Portfolio: React.FC = () => {
       town: "Osogbo",
       date: "2019 - 2024",
       description:
-        "Laboured as Tech. Man, Media Head, Class Leader, Field Leader.",
+        "Laboured as Tech. Man, Media Head, \nClass Leader, Field Leader.",
     },
   ];
 
@@ -113,7 +113,7 @@ const Portfolio: React.FC = () => {
       institution: "Ola-Oluwa Aina, Wire Industry",
       town: "Osogbo",
       date: "2015 - 2017",
-      description: "I specialize in managing and optimizing daily workflows",
+      description: "I specialize in managing and \noptimizing daily workflows",
     },
   ];
 
@@ -143,19 +143,21 @@ const Portfolio: React.FC = () => {
           </View>
           <Text style={styles.sectionTitle}>The Journey So Far</Text>
           <Text style={styles.subTitle}>Education📖</Text>
-          {educationData.map((item, index) => (
-            <EducationItem key={index} {...item} />
-          ))}
-          {educationData1.map((item, index) => (
-            <EducationItem key={index} {...item} />
-          ))}
-          <Text style={styles.subTitle}>Work Experience📖</Text>
-          {workExperience.map((item, index) => (
-            <EducationItem key={index} {...item} />
-          ))}
-          {workExperience1.map((item, index) => (
-            <EducationItem key={index} {...item} />
-          ))}
+          <View style={styles.educationItem}>
+            {educationData.map((item, index) => (
+              <EducationItem key={index} {...item} />
+            ))}
+            {educationData1.map((item, index) => (
+              <EducationItem key={index} {...item} />
+            ))}
+            <Text style={styles.subTitle}>Work Experience📖</Text>
+            {workExperience.map((item, index) => (
+              <EducationItem key={index} {...item} />
+            ))}
+            {workExperience1.map((item, index) => (
+              <EducationItem key={index} {...item} />
+            ))}
+          </View>
         </View>
       </ScrollView>
     </ImageBackground>
@@ -216,6 +218,7 @@ const styles = StyleSheet.create({
     margin: 5,
     borderRadius: 10,
   },
+
   skillText: {
     color: "#39CF65",
     fontWeight: "bold",
@@ -227,6 +230,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "100%",
     maxWidth: 500,
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 22,
@@ -248,7 +253,10 @@ const styles = StyleSheet.create({
     color: "#bbb",
     marginTop: 8,
     fontSize: 18,
+    textAlign: "center",
+    lineHeight: 24,
   },
+
   town: {
     color: "#bbb",
     marginTop: 5,
