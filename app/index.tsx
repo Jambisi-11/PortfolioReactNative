@@ -22,7 +22,7 @@
 //   pageContainer: {
 //     flex: 1,
 //     backgroundColor: "#f5f5f5",
-//     paddingTop:1, 
+//     paddingTop:1,
 //   },
 
 //   background: {
@@ -40,10 +40,15 @@
 //   },
 // });
 
-
-import { ScrollView, StatusBar, ImageBackground, Text, StyleSheet } from "react-native";
+import {
+  ScrollView,
+  StatusBar,
+  ImageBackground,
+  Text,
+  StyleSheet,
+} from "react-native";
 import MyComponent from "./Component/MyComponent";
-
+import Footer from "./Component/Footer";
 export default function HomeScreen() {
   return (
     <ImageBackground
@@ -51,11 +56,17 @@ export default function HomeScreen() {
       style={styles.background}
       resizeMode="cover"
     >
-      <StatusBar hidden={false} barStyle="dark-content" backgroundColor="transparent" translucent />
-      
+      <StatusBar
+        hidden={false}
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
+
       <ScrollView contentContainerStyle={styles.pageContainer}>
         <Text style={styles.heading}>Welcome To My Portfolio</Text>
         <MyComponent />
+        <Footer />
       </ScrollView>
     </ImageBackground>
   );

@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import emailjs from "emailjs-com";
 import { FontAwesome } from "@expo/vector-icons";
-
+import Footer from "./Component/Footer";
 interface FormData {
   to_name: string;
   from_name: string;
@@ -135,6 +135,7 @@ const ContactUs: React.FC = () => {
             <Text style={styles.submitText}>Send</Text>
           </TouchableOpacity>
         </View>
+        <Footer />
       </ScrollView>
     </ImageBackground>
   );

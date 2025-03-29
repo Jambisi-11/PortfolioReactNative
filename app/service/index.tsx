@@ -8,19 +8,20 @@ import {
   ScrollView,
   Dimensions,
 } from "react-native";
+import Footer from "../Component/Footer";
 
 // Import your images (make sure paths are correct)
-const htmlImg = require("../assets/images/html.png");
-const cssImg = require("../assets/images/css.png");
-const jsImg = require("../assets/images/js.png");
-const reactImg = require("../assets/images/react.png");
-const tailwindImg = require("../assets/images/tailwind.png");
-const gitImg = require("../assets/images/git.png");
-const soundEngineerImg = require("../assets/images/soundEngineer.png");
-const fashionDesignerImg = require("../assets/images/fashionDesigner.png");
-const filmEditorImg = require("../assets/images/filmEditor.png");
-const audioEditorImg = require("../assets/images/audioEditor.png");
-const ReactNative = require("../assets/images/ReactNative.png");
+const htmlImg = require("../../assets/images/html.png");
+const cssImg = require("../../assets/images/css.png");
+const jsImg = require("../../assets/images/js.png");
+const reactImg = require("../../assets/images/react.png");
+const tailwindImg = require("../../assets/images/tailwind.png");
+const gitImg = require("../../assets/images/git.png");
+const soundEngineerImg = require("../../assets/images/soundEngineer.png");
+const fashionDesignerImg = require("../../assets/images/fashionDesigner.png");
+const filmEditorImg = require("../../assets/images/filmEditor.png");
+const audioEditorImg = require("../../assets/images/audioEditor.png");
+const ReactNative = require("../../assets/images/ReactNative.png");
 interface ServiceItem {
   name: string;
   img: any;
@@ -60,7 +61,7 @@ const Service = () => {
 
   return (
     <ImageBackground
-      source={require("../assets/images/Backgground.png")}
+    source={require("../../assets/images/Backgground.png")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -88,6 +89,7 @@ const Service = () => {
             </View>
           ))}
         </View>
+        <Footer />
       </ScrollView>
     </ImageBackground>
   );

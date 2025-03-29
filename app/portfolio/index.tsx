@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Dimensions,
 } from "react-native";
+import Footer from "../Component/Footer";
 
 interface EducationItemProps {
   title: string;
@@ -119,7 +120,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <ImageBackground
-      source={require("../assets/images/Backgground.png")}
+    source={require("../../assets/images/Backgground.png")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -127,7 +128,7 @@ const Portfolio: React.FC = () => {
         <View style={styles.container}>
           <View style={styles.imageContainer}>
             <Image
-              source={require("../assets/images/About.png")}
+              source={require("../../assets/images/About.png")}
               style={styles.image}
             />
           </View>
@@ -159,6 +160,7 @@ const Portfolio: React.FC = () => {
             ))}
           </View>
         </View>
+        <Footer />
       </ScrollView>
     </ImageBackground>
   );
